@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  foundry:
+    build: .
+    container_name: foundryvtt
+    ports:
+      - "30000:30000"
+    volumes:
+      - /home/amauri/FoundryVTT_Data:/data
+    restart: unless-stopped
